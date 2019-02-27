@@ -19,4 +19,4 @@ def index():
             'body': 'She is beautiful'
         }
     ]
-    return render_template('index.html', title="Home", user=user)
+    return render_template('index.html', title="Home", user=user, posts=posts)
