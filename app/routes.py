@@ -34,7 +34,6 @@ def login():
 
 
 @app.route('/user/<username>')
-@login_required
 def user(username):
     user = User.query.filter_by(username=username).first_or_404()
     posts = [
