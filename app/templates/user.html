@@ -1,10 +1,9 @@
 {% extends "base.html" %}
 
 {% block content %}
-<table>
     {% include '_user.html' %}
 <hr>
 {% for post in posts %}
-    {% include '_post.html' %}
+{% include '_post.html' %}
 {% endfor %}
 {% endblock %}
