@@ -1,6 +1,7 @@
 from flask import render_template
 from app import app, db
 import logging
+from logging.handlers import SMTPHandler
 
 
 @app.errorhandler(404)
@@ -13,4 +14,3 @@ def internal_error(error):
     db.session.rollback()
     return render_template('500.html'), 500
 
-from app import routes, models, errors
