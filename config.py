@@ -6,4 +6,10 @@ class Config(object):
     SQLALCHEMY_DATABASE_URI = os.environ.get('DATABASE_URI') or \
         'sqlite:///' + os.path.join(basedir, 'app.db')
     SQLALCHEMY_TRACK_MODIFICATIONS = False
-    POSTS_PER_PAGE = 3
+    POSTS_PER_PAGE = 10
+    MAIL_SERVER = os.environ.get('smtp@gmail.com')
+    MAIL_PORT = int(os.environ.get('465') or 25)
+    MAIL_USE_SSL = os.environ.get('True') is not None
+    MAIL_USERNAME = os.environ.get('teisanutudort@gmail.com')
+    MAIL_PASSWORD = os.environ.get('Light231')
+    ADMINS = ['dreamlyman95@gmail.com']
